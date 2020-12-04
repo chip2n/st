@@ -1,0 +1,26 @@
+From b9367e3541b67481f2db755a7d053fc8ba6461b0 Mon Sep 17 00:00:00 2001
+From: Andreas Arvidsson <andreas.arvidson@gmail.com>
+Date: Fri, 4 Dec 2020 10:22:08 +0100
+Subject: [PATCH] Add custom keybinding for pasting
+
+---
+ config.def.h | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/config.def.h b/config.def.h
+index 80d25d5..386c5e3 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -208,6 +208,9 @@ static Shortcut shortcuts[] = {
+ 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+ 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+ 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
++
++        /* custom keybindings */
++	{ ControlMask,          XK_y,           clippaste,      {.i =  0} },
+ };
+ 
+ /*
+-- 
+2.29.2
+
